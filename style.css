@@ -1,0 +1,338 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.SiteHeader {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 9999;
+  width: 100%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out; }
+  .SiteHeader__inner {
+    margin: 0 auto;
+    width: 1000px;
+    position: relative; }
+  .SiteHeader__title, .SiteHeader__text {
+    color: #333;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out; }
+  .SiteHeader__spmenu {
+    background: #333; }
+  .SiteHeader__bg {
+    background: rgba(51, 51, 51, 0.9);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out; }
+    .SiteHeader__bg .SiteHeader__title,
+    .SiteHeader__bg .SiteHeader__text {
+      color: #FFF;
+      -webkit-transition: 1s ease-in-out;
+      transition: 1s ease-in-out; }
+    .SiteHeader__bg .SiteHeader__spmenu {
+      background: #FFF; }
+
+@media only screen and (max-width: 768px) {
+  .SiteHeader, .SiteHeader__inner {
+    width: 100%; }
+  .SiteHeader__text {
+    color: #FFF; } }
+
+.SiteLogo {
+  padding-left: 10px; }
+  .SiteLogo__icon, .SiteLogo__title {
+    display: inline-block; }
+  .SiteLogo__title {
+    font-size: 18px;
+    padding-left: 8px;
+    overflow: hidden;
+    line-height: 30px;
+    letter-spacing: 0.2em; }
+    .SiteLogo__title--white {
+      color: #FFF; }
+
+.SiteNavi ul {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 13px;
+  letter-spacing: .3em;
+  line-height: 30px; }
+  .SiteNavi ul li {
+    float: left;
+    position: relative; }
+    .SiteNavi ul li a {
+      padding: 0 30px; }
+  .SiteNavi ul li:hover {
+    opacity: 0.7; }
+
+.SiteNavi__toggle {
+  display: none;
+  position: absolute;
+  top: 6px;
+  right: 16px;
+  width: 18px;
+  height: 14px;
+  cursor: pointer;
+  z-index: 101; }
+  .SiteNavi__toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    transition: .35s ease-in-out; }
+  .SiteNavi__toggle span:nth-child(1) {
+    top: 0; }
+  .SiteNavi__toggle span:nth-child(2) {
+    top: 6px; }
+  .SiteNavi__toggle span:nth-child(3) {
+    bottom: 0; }
+
+@media only screen and (max-width: 768px) {
+  .SiteNavi {
+    position: fixed;
+    -webkit-transform: translateX(-800px);
+            transform: translateX(-800px);
+    -webkit-transition-duration: 5.0s;
+            transition-duration: 5.0s;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    .SiteNavi ul {
+      list-style: none;
+      position: static;
+      right: 0;
+      bottom: 0;
+      -webkit-transition-duration: 2.0s;
+              transition-duration: 2.0s;
+      opacity: 0; }
+      .SiteNavi ul li {
+        float: none;
+        position: static;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 16px 16px; }
+        .SiteNavi ul li a {
+          padding: 0; }
+      .SiteNavi ul li:after {
+        display: none; }
+    .SiteNavi__toggle {
+      display: block; }
+    .SiteNavi__open .SiteNavi {
+      -webkit-overflow-scrolling: touch;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+      -webkit-transition-duration: 0.5s;
+              transition-duration: 0.5s;
+      z-index: 10; }
+    .SiteNavi__open span:nth-child(1) {
+      top: 6px;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .SiteNavi__open span:nth-child(2) {
+      opacity: 0; }
+    .SiteNavi__open span:nth-child(3) {
+      bottom: 6px;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .SiteNavi__open ul {
+      opacity: 1;
+      -webkit-transition-duration: 4.0s;
+              transition-duration: 4.0s; }
+    .SiteNavi__inner {
+      float: left;
+      width: 70%;
+      background: rgba(0, 0, 0, 0.7);
+      height: 100%; }
+    .SiteNavi__shadow {
+      float: right;
+      width: 30%;
+      background: transparent;
+      height: 100%; } }
+
+.Hero {
+  background: -webkit-linear-gradient(225deg, #eee, #ccc);
+  background: linear-gradient(-135deg, #eee, #ccc);
+  width: 100%;
+  color: #333;
+  padding-top: 71px; }
+  .Hero__wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    height: 610px;
+    display: table; }
+  .Hero__visual {
+    width: 50%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+  .Hero__title {
+    text-align: center;
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+    .Hero__title h1 {
+      font-size: 160px;
+      margin-bottom: 20px; }
+    .Hero__title p {
+      letter-spacing: 0.5em;
+      font-size: 32px; }
+
+@media only screen and (max-width: 768px) {
+  .Hero {
+    padding: 50px 0; }
+    .Hero__wrapper {
+      width: 100%;
+      height: auto; }
+    .Hero__visual, .Hero__title {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      float: none;
+      display: block; }
+      .Hero__visual h1, .Hero__title h1 {
+        font-size: 80px;
+        margin-bottom: 20px; }
+      .Hero__visual p, .Hero__title p {
+        letter-spacing: 0.5em;
+        font-size: 16px; } }
+
+.Section {
+  padding: 100px 0;
+  overflow: hidden; }
+  .Section__wrapper {
+    width: 1000px;
+    margin: 0 auto; }
+  .Section__title {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #888; }
+  .Section__text {
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    color: #888; }
+  .Section__gray {
+    background: #EEE; }
+  .Section__white {
+    background: #FFF; }
+
+@media only screen and (max-width: 768px) {
+  .Section {
+    padding: 50px 15px; }
+    .Section__wrapper {
+      width: 100%; }
+    .Section__title {
+      font-size: 20px; }
+    .Section__text {
+      font-size: 14px; } }
+
+.SiteFooter {
+  width: 100%;
+  padding: 20px 0; }
+  .SiteFooter__inner {
+    width: 1000px;
+    margin: 0 auto; }
+
+@media only screen and (max-width: 768px) {
+  .SiteFooter, .SiteFooter__inner {
+    width: 100%; } }
+
+.ArticleList {
+  display: table;
+  margin: 0 auto;
+  height: auto;
+  vertical-align: middle;
+  text-align: center;
+  border: 0;
+  box-sizing: border-box; }
+  .ArticleList__Image {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    height: 200px;
+    width: 100%;
+    border-radius: 5px 5px 0 0; }
+  .ArticleList li {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 25px;
+    width: 300px;
+    height: auto;
+    min-height: 200px;
+    background: 0 0;
+    border-radius: 5px;
+    z-index: 0;
+    background: #FFF;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1); }
+  .ArticleList header {
+    padding: 20px; }
+  .ArticleList h1 {
+    font-size: 12px;
+    line-height: 2; }
+  .ArticleList h2 {
+    font-size: 12px;
+    line-height: 2; }
+
+body {
+  font-family: "Rounded Mplus 1c", sans-serif;
+  background: #333;
+  text-decoration: none; }
+  body a {
+    text-decoration: none; }

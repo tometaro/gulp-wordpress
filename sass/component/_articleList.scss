@@ -1,0 +1,56 @@
+.ArticleList {
+  display: table;
+  margin: 0 auto;
+  height: auto;
+  vertical-align: middle;
+  text-align: center;
+  border: 0;
+  box-sizing: border-box;
+
+  &__Image {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    height:200px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+
+  }
+
+  li {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 25px;
+    width: 300px;
+    height: auto;
+    min-height: 200px;
+    background: 0 0;
+    border-radius: 5px;
+    z-index: 0;
+    background :#FFF;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  h2 {
+    font-size: 12px;
+    line-height: 2;
+  }
+
+}
+
+

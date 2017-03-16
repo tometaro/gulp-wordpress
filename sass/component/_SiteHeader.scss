@@ -1,0 +1,55 @@
+.SiteHeader {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 9999;
+    width: 100%;
+    transition: 1s ease-in-out;
+
+    &__inner {
+        margin: 0 auto;
+        width: 1000px;
+        position: relative;
+    }
+
+    &__title,
+    &__text {
+        color: #333;
+        transition: 1s ease-in-out;
+    }
+
+    &__spmenu {
+        background: #333;
+    }
+
+    &__bg {
+        background: rgba(51,51,51,0.9);
+        transition: 1s ease-in-out;
+
+        .SiteHeader__title,
+        .SiteHeader__text {
+            color: $color-white;
+            transition: 1s ease-in-out;
+        }
+
+        .SiteHeader__spmenu {
+            background: $color-white;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  .SiteHeader, .SiteHeader__inner {
+    width: 100%;
+  }
+  .SiteHeader{
+
+    &__text {
+        color: $color-white;
+    }
+
+  }
+ 
+}
+
+
