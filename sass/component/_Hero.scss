@@ -4,7 +4,7 @@
     color: #333;
     padding-top: 71px;
 
-    &__wrapper {
+    &-Wrapper {
         width: 1000px;
         margin: 0 auto;
         height: 610px;
@@ -12,7 +12,7 @@
 
     }
 
-    &__visual {
+    &-Visual {
         width: 50%;
         height: 100%;
         display: table-cell;
@@ -21,7 +21,7 @@
 
     }
 
-    &__title {
+    &-Title {
         text-align: center;
         width: 50%;
         display: table-cell;
@@ -44,13 +44,13 @@
     .Hero {
         padding :50px 0;
 
-        &__wrapper {
+        &-Wrapper {
             width: 100%;
             height: auto;
         }
 
-        &__visual,
-        &__title {
+        &-Visual,
+        &-Title {
             width: 100%;
             height: auto;
             text-align: center;

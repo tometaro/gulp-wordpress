@@ -1,8 +1,8 @@
-.SiteFooter {
+.Footer {
     width: 100%;
     padding: 20px 0;
 
-    &__inner {
+    &-inner {
         width: 1000px;
         margin: 0 auto;
     }
@@ -10,7 +10,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .SiteFooter, .SiteFooter__inner {
+  .Footer, .Footer-Inner {
     width: 100%;
   }
 }

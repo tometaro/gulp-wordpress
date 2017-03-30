@@ -1,4 +1,4 @@
-.SiteNavi {
+.Navi {
     ul {
         list-style: none;
         position: absolute;
@@ -21,7 +21,7 @@
         }
     }
 
-    &__toggle {
+    &-Toggle {
         display: none;
         position: absolute;
         top: 6px;
@@ -58,7 +58,7 @@
 
 
 @media only screen and (max-width: 768px) {
-    .SiteNavi {
+    .Navi {
         position: fixed;
         transform: translateX(-800px);
         transition-duration: 5.0s;
@@ -92,12 +92,12 @@
             }
         }
 
-        &__toggle {
+        &-Toggle {
             display: block;
         }
 
-        &__open {
-            .SiteNavi {
+        &-Open {
+            .Navi {
                 -webkit-overflow-scrolling: touch;
                 transform: translateX(0);
                 opacity: 1;
@@ -129,7 +129,7 @@
                 transition-duration: 4.0s;
             }
         }
-        &__inner {
+        &-Inner {
             float: left;
             width: 70%;
             background: rgba(0,0,0,0.7);
@@ -137,7 +137,7 @@
 
         }
 
-        &__shadow {
+        &-Shadow {
             float: right;
             width: 30%;
             background: rgba(0,0,0,0);

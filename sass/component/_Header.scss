@@ -1,4 +1,4 @@
-.SiteHeader {
+.Header {
     position: fixed;
     width: 100%;
     padding: 20px 0;
@@ -6,50 +6,50 @@
     width: 100%;
     transition: 1s ease-in-out;
 
-    &__inner {
+    &-Inner {
         margin: 0 auto;
         width: 1000px;
         position: relative;
     }
 
-    &__title,
-    &__text {
+    &-Title,
+    &-Text {
         color: #333;
         transition: 1s ease-in-out;
     }
 
-    &__spmenu {
+    &-SpMenu {
         background: #333;
     }
 
-    &__bg {
+    &-Bg {
         background: rgba(51,51,51,0.9);
         transition: 1s ease-in-out;
 
-        .SiteHeader__title,
-        .SiteHeader__text {
+        .Header-Title,
+        .Header-Text {
             color: $color-white;
             transition: 1s ease-in-out;
         }
 
-        .SiteHeader__spmenu {
+        .Header-SpMenu {
             background: $color-white;
         }
     }
 }
 
 @media only screen and (max-width: 768px) {
-  .SiteHeader, .SiteHeader__inner {
+  .Header, .Header-Inner {
     width: 100%;
   }
-  .SiteHeader{
+  .Header{
 
-    &__text {
+    &-Text {
         color: $color-white;
     }
 
   }
- 
+
 }
 
 

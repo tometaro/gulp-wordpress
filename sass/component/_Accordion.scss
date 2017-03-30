@@ -1,0 +1,31 @@
+.Accordion {
+    dt,dd {
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        border-bottom: $White 1px solid;
+    }
+
+    dt {
+        display:block;
+        background: $WhiteGray;
+        cursor:pointer;
+    }
+
+    dd  {
+        background: #ddd;
+        display:none;
+
+    }
+
+}
+
+@media #{$small} {
+}
+
+@media #{middle} {
+    //641px〜959pxまで
+}
+@media #{large} {
+    //960px以上
+}

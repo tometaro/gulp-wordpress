@@ -1,0 +1,60 @@
+.Tab {
+  width: 1000px;
+  margin: 0 auto;
+
+  &__Menu {
+    overflow: hidden;
+  }
+
+  &__Btn {
+    float: left;
+    width: 33.333%;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    text-align: center;
+    background: $White;
+    box-sizing: border-box;
+    border-right: #eee solid 1px;
+    transition: 1s ease-in-out;
+
+    &:hover {
+      background: #ddd;
+      transition: 1s ease-in-out;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    &--Active {
+      background: #ddd;
+    }
+  }
+
+  &__Content {
+    height: 200px;
+    background: #ddd;
+    padding: 30px;
+  }
+
+  &__Inner {
+    display: none;
+
+    &--Active {
+      display: block;
+    }
+  }
+}
+@media #{$small} {
+  .Tab {
+    width: 100%;
+  }
+}
+
+@media #{middle} {
+    //641px〜959pxまで
+}
+@media #{large} {
+    //960px以上
+}

@@ -20,15 +20,6 @@ gulp.task('sass', function() {
   .pipe(plumber({ errorHandler: onError }))
 });
 
-gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-             baseDir: "./"       //対象ディレクトリ
-            ,index  : "index.html"      //インデックスファイル
-        }
-    });
-});
-
 gulp.task('watch', function() {
   browserSync.init({
     files: ['./**/*.php'],
@@ -37,7 +28,6 @@ gulp.task('watch', function() {
   gulp.watch('./sass/**/*.scss', ['sass', reload]);
   gulp.watch('./js/*.js', ['js', reload]);
   gulp.watch('images/src/*', ['images', reload]);
-  gulp.watch('./**/*.html', ['browser-sync', reload]);
 });
 
-gulp.task('default', ['sass', 'watch' ,'browser-sync',]);
+gulp.task('default', ['sass', 'watch']);
